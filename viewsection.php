@@ -46,7 +46,11 @@ require_once "api/settings.php";
                 while($row = $result->fetch_array())
                 {
                     echo '<div class="col">';
-                    echo '<a style="color: #000" href="viewpost.php?id='.$row['id'].'">'.$row['iframe'];
+                    echo '<a style="color: #000" href="viewpost.php?id='.$row['id'].'">';
+                    if(!empty($row['iframe']))
+                        echo $row['iframe'];
+                    else
+                        echo '<img style="display: block" width="300px" height="200px" src="imgs/placeholder.png">';
                     echo '<b>'.$row['title'].'</b>';
                     echo '</a></div>';
                 }
