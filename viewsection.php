@@ -42,7 +42,7 @@ require_once "api/settings.php";
             <div class="col-sm-9">
                 <div class="row">
                 <?php
-                $result = $connection->query("SELECT * FROM posts WHERE tags=$postID");
+                $result = $connection->query("SELECT * FROM posts WHERE tags=$postID"); //comment
                 while($row = $result->fetch_array())
                 {
                     echo '<div class="col">';
