@@ -8,9 +8,9 @@ permissions:
      pattern: "**"
      owner: apache
      group: apache
-     mode: 755
+     mode: 777
      type:
-       - file
+       - directory
 hooks:
    BeforeInstall:
     - location: scripts/installapache.sh
