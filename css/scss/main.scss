@@ -383,3 +383,13 @@ body {
     }
   }
 }
+
+#contactButton {
+  width: 100% !important;
+  margin-top: 5px;
+  @media screen and (min-width: 480px) {
+    float:right !important;
+    margin-top: -78px !important;
+    width: 200px !important;
+  }
+}

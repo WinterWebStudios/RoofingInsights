@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <?php
-                        $result = $connection->query("SELECT * FROM posts WHERE visibility=2 LIMIT 1");
+                        $result = $connection->query("SELECT * FROM posts ORDER BY id DESC LIMIT 1");
                         while($row = $result->fetch_array())
                         {
                             echo $row['iframe'];
@@ -67,6 +67,9 @@
                         echo '<div class="col-sm-4">';
                         echo '<a href="viewpost.php?id='.$row['id'].'">'.$row['iframe'].'</a>';
                         echo '<h5><a href="viewpost.php?id='.$row['id'].'">'.$row['title'].'</a></h5>';
+                        echo '<h6>UPDATED '.date( "M d, Y",strtotime($row['date'])).'</h6>';
+                        echo '<p><strong>by ' . $row['author'] . '</strong></p>';
+                        echo '<p>' . strip_tags($row['summary']) . '</p>';
                         echo '</div>';
                     }
                     ?>
@@ -111,7 +114,7 @@
                                     echo '<div class="col-sm-4">';
                                     echo '<a href="viewpost.php?id='.$rowPosts['id'].'">'.$rowPosts['iframe'].'</a>';
                                     echo '<h5><a href="viewpost.php?id='.$rowPosts['id'].'">' . $rowPosts['title'] . '</a></h5>';
-                                    echo '<h6>UPDATED JANUARY 1, 2018</h6>';
+                                    echo '<h6>UPDATED '.date( "M d, Y",strtotime($rowPosts['date'])).'</h6>';
                                     echo '<p><strong>by ' . $rowPosts['author'] . '</strong></p>';
                                     echo '<p>' . strip_tags($rowPosts['summary']) . '</p>';
                                     echo '</div>';
@@ -120,7 +123,7 @@
                                         echo '<div class="col-sm-6">';
                                         echo '<a href="viewpost.php?id='.$rowPosts['id'].'">'.$rowPosts['iframe'].'</a>';
                                         echo '<h5><a href="viewpost.php?id='.$rowPosts['id'].'">' . $rowPosts['title'] . '</a></h5>';
-                                        echo '<h6>UPDATED JANUARY 1, 2018</h6>';
+                                        echo '<h6>UPDATED '.date( "M d, Y",strtotime($rowPosts['date'])).'</h6>';
                                         echo '<p><strong>by ' . $rowPosts['author'] . '</strong></p>';
                                         echo '<p>' . strip_tags($rowPosts['summary']) . '</p>';
                                         echo '</div>';
@@ -133,7 +136,7 @@
                                         echo '</div>';
                                         echo '<div class="float-right text">';
                                         echo '<h5><a href="viewpost.php?id='.$rowPosts['id'].'">' . $rowPosts['title'] . '</a></h5>';
-                                        echo '<h6>UPDATED JANUARY 1, 2018</h6>';
+                                        echo '<h6>UPDATED '.date( "M d, Y",strtotime($rowPosts['date'])).'</h6>';
                                         echo '<p>' . strip_tags($rowPosts['summary']) . '</p>';
                                         echo '</div>';
                                         echo '</div>';
