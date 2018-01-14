@@ -1,8 +1,10 @@
 <header>
     <div class="container">
         <div class="logoBox">
-            <img class="logo" src="imgs/logo.png">
-            <h1>Roofing Insights</h1>
+            <a href="index.php">
+                <img class="logo" src="imgs/logo.png">
+                <h1>Roofing Insights</h1>
+            </a>
         </div>
         <form method="get" action="search.php">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">

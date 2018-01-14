@@ -53,6 +53,8 @@ require_once "api/settings.php";
                             echo '<img style="display: block" width="300px" height="200px" src="imgs/placeholder.png">';
                         echo '<a style="color: #000" href="viewpost.php?id='.$row['id'].'">';
                         echo '<b>'.$row['title'].'</b>';
+                        echo '<h6>Posted '.date( "M d, Y",strtotime($row['date'])).'</h6>';
+                        echo '<p>' . substr(strip_tags($row['summary']), 0, 100) . ' <span style="color: #0055aa">Read More...</span></p>';
                         echo '</a></div>';
                     }
                     ?>
