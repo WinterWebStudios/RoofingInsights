@@ -46,6 +46,9 @@ require_once "api/settings.php";
                     $result = $connection->query("SELECT * FROM posts WHERE tags=$postID"); //comment
                     while($row = $result->fetch_array())
                     {
+                        if($result->num_rows == 1) {
+                            header("location: viewpost.php?id=".$row['id']);
+                        }
                         echo '<div class="col-lg-4 col-sm-12">';
                         if(!empty($row['iframe']))
                             echo '<div class="youtube-player" data-id="'.substr(strrchr($row['iframe'], '/'), 1 ).'"></div>';
@@ -54,7 +57,7 @@ require_once "api/settings.php";
                         echo '<a style="color: #000" href="viewpost.php?id='.$row['id'].'">';
                         echo '<b>'.$row['title'].'</b>';
                         echo '<h6>Posted '.date( "M d, Y",strtotime($row['date'])).'</h6>';
-                        echo '<p>' . substr(strip_tags($row['summary']), 0, 100) . ' <span style="color: #0055aa">Read More...</span></p>';
+                        echo '<p>' . substr(strip_tags($row['summary']), 0, 50) . '...  <span style="color: #0055aa">Read More</span></p>';
                         echo '</a></div>';
                     }
                     ?>
