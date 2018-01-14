@@ -63,5 +63,4 @@
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
-
     header("location: ../index.php");
