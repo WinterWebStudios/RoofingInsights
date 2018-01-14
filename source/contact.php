@@ -47,7 +47,7 @@ require_once "api/settings.php";
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <input type="email" name="tEmail" class="form-control" id="exampleFormControlInput1" placeholder="YourEmail@example.com">
+                                <input type="email" name="tEmail" class="form-control" id="exampleFormControlInput1" placeholder="YourEmail@Example.com">
                             </div>
                             <div class="col">
                                 <input type="text" name="tName" class="form-control" placeholder="Your Name">
