@@ -37,7 +37,7 @@
                             echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$row['name'].'</a>';
                             echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
                             while($resultRow = $resultSub->fetch_array()) {
-                                echo '<a class="dropdown-item" href="viewsection.php?id='.$row['id'].'">'.$resultRow['name'].'</a>';
+                                echo '<a class="dropdown-item" href="viewsection.php?id='.$resultRow['id'].'">'.$resultRow['name'].'</a>';
                             }
                             echo '</div>';
                             echo '</li>';
