@@ -11,9 +11,9 @@
     <head>
         <title>Roofing Insights | We expose the good, the bad and the ugly to endorse the roofing industry</title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Description here">
+		<meta name="description" content="Roofing Insights was founded with a rebellious spirit and ambitious objective to become a leading reporter on the roofing industry, covering products, tools and installation practices as well as roofing news.">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#7db9e8">
+        <meta name="theme-color" content="#00508d">
 
         <link rel="icon" href="imgs/logo.png">
         <link rel="stylesheet" href="css/font-awesome.min.css">

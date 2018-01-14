@@ -17,7 +17,7 @@ require_once "api/settings.php";
     <meta charset="UTF-8">
     <meta name="description" content="Description here">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#7db9e8">
+    <meta name="theme-color" content="#00508d">
 
     <link rel="icon" href="imgs/logo.png">
     <link rel="stylesheet" href="css/font-awesome.min.css">

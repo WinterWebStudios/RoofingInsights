@@ -117,10 +117,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    Copyright Roofing Insights &copy; 2017, All rights reserved.
+                    Copyright Roofing Insights &copy; 2017-18, All rights reserved.
                 </div>
                 <div class="col-7 text-right">
-                    Privacy Policy | Terms of Use | Contact Us | About Us
+                    <a href="contact.php">Contact Us</a> | <a href="viewpost.php?id=23">About Us</a>
                 </div>
             </div>
 
