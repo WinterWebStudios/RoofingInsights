@@ -43,7 +43,7 @@ require_once "api/settings.php";
         <div class="row">
             <div class="col-sm-9">
                 <h1 class="display-4">Contact Us</h1>
-                <form method="post" action="sendEmail.php">
+                <form method="post" action="api/sendEmail.php">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">

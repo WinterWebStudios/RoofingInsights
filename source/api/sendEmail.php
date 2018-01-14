@@ -2,7 +2,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require "vendor/autoload.php";
+    require "../vendor/autoload.php";
     $email = $_POST['tEmail'];
     $name = $_POST['tName'];
     $message = $_POST['tMessage'];
@@ -24,7 +24,7 @@
     $captcha_success=json_decode($verify);
 
     if ($captcha_success->success==false) {
-        die("<p>Google Capatcha Verification failed. Please try again.</p>");
+        die("<p>Google Captcha Verification failed. Please try again.</p>");
     }
 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -64,4 +64,4 @@
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
 
-    header("location: index.php");
+    header("location: ../index.php");
