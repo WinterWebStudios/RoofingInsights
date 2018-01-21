@@ -27,7 +27,7 @@
                     </li>
                     <?php
                     $result = $connection->query("SELECT * FROM categories WHERE parent=0");
-                    for($i = 0; $i < 9; $i++)
+                    for($i = 0; $i < 8; $i++)
                     {
                         $row = $result->fetch_array();
                         $resultSub = $connection->query("SELECT * FROM categories WHERE parent=".$row['id']);
