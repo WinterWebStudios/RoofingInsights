@@ -21,14 +21,15 @@
                 <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
             </form>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <div class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <?php
                     $result = $connection->query("SELECT * FROM categories WHERE parent=0");
-                    while($row = $result->fetch_array())
+                    for($i = 0; $i < 9; $i++)
                     {
+                        $row = $result->fetch_array();
                         $resultSub = $connection->query("SELECT * FROM categories WHERE parent=".$row['id']);
                         if($resultSub->num_rows < 1) {
                             echo '<li class="nav-item">';
@@ -48,6 +49,18 @@
                     ?>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <?php
+                                while($row = $result->fetch_array()) {
+                                    echo '<a class="dropdown-item" href="viewsection.php?id='.$row['id'].'">'.$row['name'].'</a>';
+                                }
+                            ?>
+                        </div>
                     </li>
                 </ul>
             </div>
